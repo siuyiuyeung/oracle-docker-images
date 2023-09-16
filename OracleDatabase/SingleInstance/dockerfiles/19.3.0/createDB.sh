@@ -213,8 +213,6 @@ setupTnsnames;
 sqlplus / as sysdba << EOF
    ALTER SYSTEM SET control_files='$ORACLE_BASE/oradata/$ORACLE_SID/control01.ctl' scope=spfile;
    ALTER SYSTEM SET local_listener='';
-   ALTER PLUGGABLE DATABASE $ORACLE_PDB SAVE STATE;
-   EXEC DBMS_XDB_CONFIG.SETGLOBALPORTENABLED (TRUE);
 
    ALTER SESSION SET "_oracle_script" = true;
    CREATE USER OPS\$oracle IDENTIFIED EXTERNALLY;

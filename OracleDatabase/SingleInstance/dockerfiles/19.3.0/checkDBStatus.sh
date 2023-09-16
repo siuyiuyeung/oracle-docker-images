@@ -41,7 +41,7 @@ checkPDBOpen() {
    PDB_OPEN_MODE=$(sqlplus -s / << EOF
 set heading off;
 set pagesize 0;
-SELECT DISTINCT open_mode FROM v\$pdbs;
+SELECT DISTINCT open_mode FROM v\$database;
 exit;
 EOF
 )
